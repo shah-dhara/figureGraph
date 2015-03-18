@@ -9,20 +9,22 @@
  * 45 (Percentage value)
  *
  * opts - provide this to override default option. Default options are as follows:
- * {
- *   red: '#F2A9A0',
- *   green: '#9DDE68',
- *   blue: '#A6C7E8',
- *   yellow: '#E7D57F'
- * }
+ *  {
+      blockDiv: [25,25,25,25],
+      colorDiv: ['#9DDE68', '#A6C7E8', '#E7D57F', '#F2A9A0'],
+      bg: 'transparent',
+      stroke: '#d0d0d0',
+      textColor: '#FF0000',
+      textFont: '18px Roboto'
+    }
  *
  * @author dhara.s
  */
-angular.module('shared').directive('figureGraph', ['$window', function($window) {
+angular.module('myModule').directive('figureGraph', ['$window', function($window) {
     
     var context ;
     
-    var height = 200,
+    var height = 200, //configurable
         width = height * 0.5,
         smRadius = height * 0.075,
         faceRadius = 2 * smRadius,
